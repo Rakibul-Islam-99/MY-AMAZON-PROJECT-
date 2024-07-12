@@ -10,15 +10,15 @@ export let cart=[{
 ];
 
  export function addToCart(productId){
-  let machingItem;
+  let matchingProduct;
   cart.forEach((cartItem)=>{
     if(productId===cartItem.productId){
-      machingItem=cartItem;
+      matchingProduct=cartItem;
     }
   });
 
-      if(machingItem){
-        machingItem.quantity+=1;
+      if(matchingProduct){
+        matchingProduct.quantity+=1;
       }else{
         
     cart.push({

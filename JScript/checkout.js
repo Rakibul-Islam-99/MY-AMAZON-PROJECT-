@@ -8,14 +8,14 @@ let cartSummaryHTML=' ';
 cart.forEach((cartItem)=>{
 
 const productId=cartItem.productId;
-let machingProduct;
+let matchingProduct;
 products.forEach((product)=>{
   if(product.id===productId){
-    machingProduct=product;
+    matchingProduct=product;
   }
   
 });
-// console.log(machingProduct);
+
 
 
   cartSummaryHTML+=`
@@ -26,14 +26,14 @@ products.forEach((product)=>{
 
             <div class="cart-item-details-grid">
               <img class="product-image"
-                src="${machingProduct.image}">
+                src="${matchingProduct.image}">
 
               <div class="cart-item-details">
                 <div class="product-name">
-                  ${machingProduct.name}
+                  ${matchingProduct.name}
                 </div>
                 <div class="product-price">
-                  $${formatCurrency(machingProduct.priceCents)}
+                  $${formatCurrency(matchingProduct.priceCents)}
                 </div>
                 <div class="product-quantity">
                   <span>
@@ -42,7 +42,7 @@ products.forEach((product)=>{
                   <span class="update-quantity-link link-primary">
                     Update
                   </span>
-                  <span class="delete-quantity-link js-delete-quantity-link link-primary" data-product-id="${machingProduct.id}">
+                  <span class="delete-quantity-link js-delete-quantity-link link-primary" data-product-id="${matchingProduct.id}">
                     Delete
                   </span>
                 </div>
@@ -55,7 +55,7 @@ products.forEach((product)=>{
                 <div class="delivery-option">
                   <input type="radio" checked
                     class="delivery-option-input"
-                    name="delivery-option-${machingProduct.id}">
+                    name="delivery-option-${matchingProduct.id}">
                   <div>
                     <div class="delivery-option-date">
                       Tuesday, June 21
@@ -68,7 +68,7 @@ products.forEach((product)=>{
                 <div class="delivery-option">
                   <input type="radio"
                     class="delivery-option-input"
-                    name="delivery-option-${machingProduct.id}">
+                    name="delivery-option-${matchingProduct.id}">
                   <div>
                     <div class="delivery-option-date">
                       Wednesday, June 15
@@ -81,7 +81,7 @@ products.forEach((product)=>{
                 <div class="delivery-option">
                   <input type="radio"
                     class="delivery-option-input"
-                    name="delivery-option-${machingProduct.id}">
+                    name="delivery-option-${matchingProduct.id}">
                   <div>
                     <div class="delivery-option-date">
                       Monday, June 13
