@@ -59,10 +59,5 @@ export function renderPaymentsummary(){
 
   document.querySelector('.js-payment-summary').innerHTML=paymentSummaryHTML;
 
-  console.log(productPriceCents);
-  console.log(shippingPriceCents);
-  console.log(totalBeforeTaxCents);
-  console.log(taxCents);
-  console.log(totalCents);
-  console.log(paymentSummaryHTML);
+ 
 }
